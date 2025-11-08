@@ -76,7 +76,7 @@ header .container {
   position: relative;
 }
 
-header .logo {
+header .logo > a {
   color: var(--main-color);
   font-size: 2rem;
   font-weight: bold;
@@ -87,7 +87,7 @@ header .logo {
 }
 
 @media (max-width: 767px) {
-  header .logo {
+  header .logo > a {
     width: 100%;
   }
 
@@ -95,8 +95,6 @@ header .logo {
     margin: auto;
   }
 }
-
-
 
 header nav ul {
   display: flex;
@@ -124,7 +122,6 @@ header li > a {
     height: 40px;
   }
 }
-
 
 header li > a::before {
   content: "";
