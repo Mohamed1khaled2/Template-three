@@ -1,54 +1,106 @@
 /* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
-
-
-
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 
 /* Start Global Rules  */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
 
 :root {
-    --main-color:#2196F3;
-    --main-color-alt:#1787E0;
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
+  --main-transition: 0.3s;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Cairo", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    padding-left: 15px ;
-    padding-right: 15px ;
-    margin-right: auto ;
-    margin-left: auto ;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* small */
-@media (min-width:768px) {
-    .container {
-        width: 750px;
-    }
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }
 /* medium */
 @media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
+  .container {
+    width: 970px;
+  }
 }
 
 /* large */
 @media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
+  .container {
+    width: 1170px;
+  }
 }
 /* End Global Rules */
+
+/* start Header */
+
+header {
+  box-shadow: 0 0 10px #ddd;
+  position: relative;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+header .logo {
+  color: var(--main-color);
+  font-size: 2rem;
+  font-weight: bold;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space;
+}
+
+header li > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  text-transform: capitalize;
+  position: relative;
+  color: black;
+  padding: 0 30px;
+  transition: var(--main-transition);
+}
+
+/* End Header */
