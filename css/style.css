@@ -99,13 +99,13 @@ header .logo > a {
   }
 }
 
-header nav ul {
+header nav .main-links {
   display: flex;
   align-items: center;
-  justify-content: space;
+  justify-content: space-between;
 }
 
-header li > a {
+header .main-links > li > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,14 +121,14 @@ header li > a {
 }
 
 @media (max-width: 767px) {
-  header li > a {
-    padding: 10px;
-    font-size: 1.2rem;
+  header .main-links > li > a {
+    padding: 0 10px;
+    font-size: 1rem;
     height: 40px;
   }
 }
 
-header li > a::before {
+header .main-links > li > a::before {
   content: "";
   /* width: 80px; */
   width: 100%;
@@ -266,3 +266,98 @@ header li > a:hover::before {
   }
 }
 /* end  animation */
+
+/* start mega-menu */
+.mega-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 30px);
+  width: 100%;
+  background-color: white;
+  border-bottom: 3px solid var(--main-color);
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: top var(--main-transition), opacity var(--main-transition);
+  z-index: 1000;
+}
+
+.main-links li.other-links > a:hover + .mega-menu,
+.main-links li.other-links:hover .mega-menu,
+.main-links li.other-links .mega-menu:hover {
+  opacity: 1;
+  pointer-events: auto;
+  top: calc(100% + 1px);
+}
+
+
+@media (max-width: 767px) {
+  .mega-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.mega-menu .image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .mega-menu .image img {
+    display: none;
+  }
+}
+
+.mega-menu .links {
+  min-width: 240px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.mega-menu .links > li {
+  position: relative;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+
+.mega-menu .links > li::before {
+  content: "";
+  width: 0;
+  background-color: #fafafa;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+
+.mega-menu .links li:hover::before {
+  width: 100%;
+}
+
+.mega-menu .links > li > a {
+  color: var(--main-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+
+.mega-menu .links li:not(:last-child) {
+  border-bottom: 1px solid #e9e6e6;
+}
+
+@media (max-width:767px) {
+  .mega-menu .links:first-of-type li:last-child {
+  border-bottom: 1px solid #e9e6e6;
+}
+}
+/* end mega-menu */
