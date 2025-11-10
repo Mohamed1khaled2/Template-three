@@ -834,7 +834,6 @@ header li > a:hover::before {
   width: 100%;
   text-align: right;
   background-color: rgb(249, 249, 249);
-
 }
 
 .services .container .box .info::before {
@@ -875,3 +874,55 @@ header li > a:hover::before {
 }
 
 /* End Services */
+
+/* start our skills */
+.our-skills {
+  padding: 100px 0px;
+}
+
+.our-skills .container {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 767px) {
+  .our-skills .container {
+    flex-direction: column;
+  }
+}
+
+.our-skills .container .skills {
+  flex: 2;
+}
+
+.our-skills .container .box {
+  display: flex;
+  flex-direction: column;
+}
+.our-skills .container .box .prog {
+  height: 30px;
+  background-color: rgb(238, 238, 238);
+  position: relative;
+}
+.our-skills .container .box h3 {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.our-skills .container .box h3 span {
+  font-size: 12px;
+  color: var(--main-color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(204, 204, 204);
+  border-image: initial;
+  padding: 3px 5px;
+  border-radius: 4px;
+}
+.our-skills .container .skills .box .prog span {
+  background-color: var(--main-color);
+  display: inline-block;
+  height: 30px;
+}
+
+/* end our skills */
