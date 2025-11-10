@@ -695,72 +695,74 @@ header li > a:hover::before {
 .team-members {
   padding: 100px 0px;
 }
-.team-members .container{
-  display:  grid;
+.team-members .container {
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
 }
 
 .team-members .container .box {
   position: relative;
-  transition: var(--main-transition) ;
-
+  transition: var(--main-transition);
 }
 
 .team-members .container .box::before,
- .team-members .container .box::after {
-    content: "";
-    background-color: #f3f3f3;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    border-radius: 10px;
-    transition: var(--main-transition);
-    width: 0;
-    z-index: -2
+.team-members .container .box::after {
+  content: "";
+  background-color: #f3f3f3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 10px;
+  transition: var(--main-transition);
+  width: 0;
+  z-index: -2;
 }
+
 .team-members .container .box::before {
-  width: calc(100% - 60px)
+  width: calc(100% - 60px);
 }
+
 .team-members .container .box::after {
   width: 0;
   background-color: #e4e4e4;
 }
-.team-members .container .box:hover::after {
-    width: calc(100% - 60px)
 
+.team-members .container .box:hover::after {
+  width: calc(100% - 60px);
 }
-.team-members .container .box  .data {
+
+.team-members .container .box .data {
   display: flex;
   flex-direction: row;
   padding-top: 25px;
   padding-bottom: 10px;
-  
-}
-.team-members .container .box:hover img{
-  filter: grayscale(100%); 
-
 }
 
-.team-members .container .box  .data .social{
+.team-members .container .box:hover img {
+  filter: grayscale(100%);
+}
+
+.team-members .container .box .data .social {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   margin-left: 15px;
 }
-.team-members .container .box  .data .social a {
+
+.team-members .container .box .data .social a {
   color: #777;
   transform: var(--main-transition);
-
 }
-.team-members .container .box  .data .social a :hover {
+
+.team-members .container .box .data .social a :hover {
   color: var(--main-color);
 }
+
 .team-members .container .box img {
   width: calc(100% - 60px);
-  border-radius:10px ;  
-
+  border-radius: 10px;
 }
 
 .team-members .container .box .info {
