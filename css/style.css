@@ -1558,6 +1558,7 @@ header li > a:hover::before {
 /* start footer */
 footer {
   background-color: rgb(26, 26, 26);
+  padding-bottom: 5px;
 }
 
 footer .container {
@@ -1575,13 +1576,26 @@ footer .container .box .social {
 }
 footer .container .box .social ul {
   display: flex;
-  gap: 30px;
+  gap: 15px;
 }
 footer .container .box .social ul li {
   font-size: 2rem;
   background-color: #313131;
   padding: 10px;
+  transition: var(--main-transition);
 }
+footer .container .box .social ul li:first-child:hover {
+  background-color: rgb(24, 119, 242);
+}
+
+footer .container .box .social ul li:nth-child(2):hover {
+  background-color: rgb(29, 161, 242);
+}
+
+footer .container .box .social ul li:last-child:hover {
+  background-color: red;
+}
+
 footer .social ul li i {
   color: white;
 }
@@ -1590,6 +1604,7 @@ footer .box:nth-child(2) {
   display: flex;
   align-items: center;
 }
+
 footer .box .links {
   display: flex;
   height: 100%;
@@ -1601,12 +1616,27 @@ footer .box .links {
   color: #b9b9b9;
   width: 100%;
 }
+
 footer .box .links li {
   border-bottom: 1px solid #444;
   padding: 10px;
+  padding-left: 0;
+  transition: var(--main-transition);
+  cursor: pointer;
 }
+
+footer .box .links li:hover {
+  padding-left: 10px;
+  color: white;
+}
+
 footer .box .links li::before {
-  content: "";
+  content: "\e4c0";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  font-size: 1rem;
+  margin-right: 10px;
+  color: var(--main-color);
 }
 
 footer .container .box .info {
@@ -1614,8 +1644,51 @@ footer .container .box .info {
   color: #b9b9b9;
 }
 
+/* footer .box:nth-child(3) {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}  */
+footer .box:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer .box:nth-child(3) .line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  color: rgb(185, 185, 185);
+}
+
+footer .box:nth-child(3) .line i {
+  color: var(--main-color);
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+footer .box:nth-child(3) .line .info {
+  line-height: 1.7;
+  flex: 1 1 0%;
+}
+
+footer .footer-gallery {
+  margin: auto 0;
+}
+
 footer .footer-gallery img {
   width: 78px;
   border: 3px solid white;
+}
+
+footer .copyright {
+  text-align: center;
+  color: white;
+  padding: 25px 0px;
+  margin: 50px 0px 0px;
+  border-top: 1px solid rgb(68, 68, 68);
 }
 /* end footer */
