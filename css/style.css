@@ -1086,6 +1086,7 @@ header li > a:hover::before {
 @media (max-width: 767px) {
   .events .container .subscribe form {
     flex-direction: column;
+    width: auto;
   }
 
   .events .dots {
