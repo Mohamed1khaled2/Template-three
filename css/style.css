@@ -1447,7 +1447,6 @@ header li > a:hover::before {
 
 /* start discount */
 .discount {
-  height: 100vh;
   display: flex;
   flex-wrap: wrap;
 }
