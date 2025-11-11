@@ -44,21 +44,19 @@ h2 {
   margin-left: auto;
 }
 
-/* small */
+/* Small */
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
-
-/* medium */
+/* Medium */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
-
-/* large */
+/* Large */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -1018,6 +1016,13 @@ header li > a:hover::before {
 .events .container img {
   max-width: 450px;
 }
+
+@media (max-width: 767px) {
+  .events .container img {
+    display: none;
+  }
+}
+
 .events .container .info .time {
   display: flex;
   flex-direction: row;
@@ -1173,23 +1178,23 @@ header li > a:hover::before {
   transform: translateY(-15px);
 }
 .pricing .container .plans .advanced .label {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    writing-mode: vertical-lr;
-    padding: 30px 10px;
-    font-weight: bold;
-    color: white;
-    font-size: 1.2rem;
-    background-color: var(--main-color);
+  position: absolute;
+  top: 0;
+  right: 20px;
+  writing-mode: vertical-lr;
+  padding: 30px 10px;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  background-color: var(--main-color);
 }
 .pricing .container .plans .advanced .label::after {
   content: "";
-  border-width:20px ;
+  border-width: 20px;
   border-color: transparent transparent white transparent;
   border-style: solid;
   position: absolute;
-  right:1px;
+  right: 1px;
   bottom: 0;
 }
 .pricing .container .plans .box h3 {
@@ -1257,9 +1262,6 @@ header li > a:hover::before {
   display: flex;
 
   background-color: #e4e4e4;
-
-
-
 }
 
 .videos .container .holder .list {
@@ -1267,7 +1269,6 @@ header li > a:hover::before {
   border: 1px solid #ececec;
 
   min-width: 300px;
-
 }
 .videos .container .holder .list .name {
   display: flex;
@@ -1276,7 +1277,8 @@ header li > a:hover::before {
   justify-content: space-between;
   font-weight: bold;
   font-size: 1.1rem;
-  background-color: #e4e4e4;  margin-bottom: 10px;
+  background-color: #e4e4e4;
+  margin-bottom: 10px;
 }
 .videos .container .holder .list i {
   transition: var(--main-transition);
@@ -1287,22 +1289,20 @@ header li > a:hover::before {
 }
 
 .videos .container .holder .list ul li {
-
   padding: 15px;
-  display: flex;flex-direction: column;
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid #ececec;
   cursor: pointer;
   transition: var(--main-transition);
   text-transform: capitalize;
 }
 
-
-.videos .container .holder .list ul li:hover  {
+.videos .container .holder .list ul li:hover {
   color: var(--main-color);
   background-color: #fafafa;
 }
 .videos .container .holder .list ul li:not(:last-child) {
-  
   margin-bottom: 5px;
 }
 .holder .list ul li .time {
@@ -1315,16 +1315,24 @@ header li > a:hover::before {
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
-    border: 1px solid #ececec;
-
- 
+  border: 1px solid #ececec;
 }
+
 .videos .container .holder .preview img {
   max-width: 100%;
 }
 
+@media (max-width: 767px) {
+  .videos .container .holder {
+    flex-direction: column;
+
+  }
+  
+}
+
+
 .videos .container .holder .preview .info {
   padding: 20px;
-background-color: white;
+  background-color: white;
 }
 /* end top videos */
