@@ -1083,6 +1083,20 @@ header li > a:hover::before {
   gap: 30px;
 }
 
+@media (max-width:767px) {
+  .events .container .subscribe form {
+    flex-direction: column;
+  }
+
+  .events .dots {
+    display: none;
+  }
+  .events .container .subscribe form input[type="email"] {
+    width: 250px;
+  }
+  
+}
+
 .events .container .subscribe form input[type="email"] {
   padding: 20px;
   border-radius: 50px;
